@@ -1,0 +1,15 @@
+<div class='banner' style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://source.unsplash.com/random/?beer?sig=<%= rand(10..10000000000) %>)">
+  <div class="container">
+    <h1 class='article-title'><%= @article.title %></h1>
+  </div>
+</div>
+
+<div class="container container-show py-5">
+
+  <p class='content'><%= @article.content %></p>
+
+  <div>
+    <%= link_to '<i class="fa-regular fa-pen-to-square fa-xs"></i> Edit'.html_safe, edit_article_path, class: 'btn btn-edit me-3'%>
+    <%= link_to '<i class="fa-solid fa-house fa-xs"></i> Home'.html_safe, articles_path, class: 'btn btn-back' %>
+  </div>
+</div>

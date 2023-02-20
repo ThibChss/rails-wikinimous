@@ -1,0 +1,16 @@
+<div class="pt-4">
+  <%= form_for(article) do |a| %>
+    <div class="py-3">
+      <h4><%= a.label :title, class: 'form-label label-beer' %></h4>
+      <%= a.text_field :title, class: 'form-control', placeholder: "Article's title" %>
+    </div>
+    <div class="py-3">
+      <h4><%= a.label :content, class: 'form-label label-beer' %></h4>
+      <%= a.text_field :content, class: 'form-control input-content-beer', placeholder: 'Some content here . . .' %>
+    </div>
+    <div class="py-3 d-flex justify-content-between">
+      <%= a.submit class: 'btn btn-edit' %>
+      <%= link_to '<i class="fa-solid fa-house fa-xs"></i> Home'.html_safe, articles_path, class: 'btn btn-back' %>
+    </div>
+  <% end %>
+</div>

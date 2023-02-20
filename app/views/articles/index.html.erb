@@ -1,0 +1,15 @@
+<div class="container py-5">
+  <h1 class='title-index'>All our articles of today</h1>
+
+  <%= link_to '<i class="fa-solid fa-plus fa-2xs"></i> Add Article'.html_safe, new_article_path, class: 'btn btn-add my-4' %>
+
+  <div class='cards-category'>
+
+    <% @articles.each do |a| %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://source.unsplash.com/random/?beer?sig=<%= rand(10..10000000000) %>)">
+          <%= link_to a.title, article_path(a), class: 'link-article' %>
+          <%= link_to ('<i class="fa-solid fa-trash-can fa-xs"></i>').html_safe, article_path(a), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: 'trashcan'%>
+      </div>
+    <% end %>
+  </div>
+</div>

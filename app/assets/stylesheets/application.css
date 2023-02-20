@@ -1,15 +1,124 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,500;1,600;1,700&family=Karla:wght@300;400;600&display=swap');
+
+body {
+  background-color: #000000d9;
+  font-family: 'Karla', sans-serif;
+  color: white;
+}
+
+.title-index, .link-, .title-form, .label-beer {
+  font-family: 'Fira Sans', sans-serif;
+}
+
+.title-index, .title-form {
+  color: white;
+  text-align: center;
+  font-size: 50px;
+}
+
+.card-category {
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.cards-category {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3em;
+}
+
+.trashcan {
+  color: white;
+  border: none;
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+.card-category:hover .trashcan, .card-category:hover .link-article {
+  color: white;
+  opacity: 1;
+}
+
+.link-article {
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  opacity: 0.7;
+  transition: .2s opacity ease-in-out;
+}
+
+.btn-add, .btn-back {
+  background-color: white;
+  opacity: 0.7;
+  font-weight: bold;
+  transition: .2s opacity ease-in-out;
+}
+
+.btn-add:hover, .btn-back:hover {
+  background-color: white;
+  opacity: 0.9;
+}
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+}
+
+.banner .article-title {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.content {
+  width: 60%;
+  text-align: justify;
+  margin-bottom: 0;
+}
+
+.btn-edit {
+  color: white;
+  background-color: rgb(255, 201, 60, 0.7);
+  font-weight: bold;
+  transition: .2s background-color ease-in-out;
+}
+
+.btn-edit:hover {
+  color: white;
+  background-color: rgb(255, 201, 60, 0.9);
+}
+
+.container-show {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container-form {
+  width: 60%;
+}
+
+.input-content-beer {
+  padding-bottom: 100px;
+}
+
+.label-beer {
+  margin-bottom: 0;
+}
